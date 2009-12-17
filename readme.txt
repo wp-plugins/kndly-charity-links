@@ -13,9 +13,9 @@ Knd.ly (pronounced "kindly") is a WordPress plugin that gives you an opportunity
 
 Lets suppose you are blogging about a new book you have read.  It would be natural to include an Amazon.com link to the book for your interested readers to be able to purchase the book and read for themselves.  As it is, this link is only sending your readers to the Amazon store.  With Knd.ly installed, that same Amazon link will be converted to tell Amazon that their customer was referred to their store to buy that book, and Amazon will issue a referral commission.  It is from this commission that the donation is made to the charity of your choice (among the dozen or so charities we support).  Knd.ly works with over 100 such stores online.
 
-To learn more about the plugin visit [our FAQ page](http://test.knd.ly/faq/). To learn more about the charities we support or the stores we can generate links for please visit [our Partners page](http://test.knd.ly/partners/).
+To learn more about the plugin visit [our FAQ page](http://knd.ly/a/faq/). To learn more about the charities we support or the stores we can generate links for please visit [our Partners page](http://knd.ly/a/partners/).
 
-If you experience any bugs or have ideas, requests or complaints feel free to [contact us](http://test.knd.ly/contact/).
+If you experience any bugs or have ideas, requests or complaints feel free to [contact us](http://knd.ly/a/contact/).
 
 == Installation ==
 
