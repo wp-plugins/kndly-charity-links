@@ -4,7 +4,7 @@ Plugin Name: Knd.ly Charity Links
 Plugin URI: http://knd.ly/
 Description: Checks for links to Amazon products. If links are found they are converted in to clean affiliate links. All money generated through affiliate sales will be donated to the charity of your choice. <b>IMPORTANT NOTE</b>: the default option is for all money earned to be divided evenly between the charities we support. If you would like to support a specific charity (and donate much more money to them) you must choose that charity in the Knd.ly Config page.
 Author: Appible LLC
-Version: 1.0
+Version: 1.1
 Author URI: http://appible.org/
 */
 
@@ -69,7 +69,8 @@ function modify_menu_kndly_charity_links () {
   );  
 }
 function kndly_charity_links_options () {
-  echo '<div class="wrap"><h2>Knd.ly Charity Links Configuration</h2>';
+  echo '<div class="wrap"><br/><a href="http://knd.ly/"><img align="middle" src="'.WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)).'kndly_logo.png"/></a>
+ <em>Because there\'s no \'I\' in kindness.</em>';
   if ($_REQUEST['submit']) {
     update_kndly_charity_links_options();
   }
@@ -149,7 +150,7 @@ function kndly_charity_links_form () {
   $form='
     <form method="post">
     <h3>Choose a Charity:</h3>
-	<div style="margin-left:20px; line-height:2.25;font-size:1.2em;">  
+	<div style="margin-left:20px;width:250px;line-height:2.25;font-size:1.2em;float:left;">  
     <input type="radio" name="kndly_charity_links_id" value="-kndly-alz" ';
   if($charity_id == "-kndly-alz") $form .= 'checked';
   $form .= '/> <a href="http://alz.org/">Alzheimer\'s Association</a><br/>
@@ -166,6 +167,10 @@ function kndly_charity_links_form () {
   if($charity_id == "-kndly-cdls") $form .= 'checked';
   $form .= '/> <a href="http://cdlsusa.org/">CdLS-USA Foundation</a><br/>
   
+    <input type="radio" name="kndly_charity_links_id" value="-kndly-globalfund" ';
+  if($charity_id == "-kndly-globalfund") $form .= 'checked';
+  $form .= '/> <a href="http://joinred.com/">The Global Fund</a><br/>
+  
     <input type="radio" name="kndly_charity_links_id" value="-kndly-habitat" ';
   if($charity_id == "-kndly-habitat") $form .= 'checked';
   $form .= '/> <a href="http://habitat.org/">Habitat for Humanity</a><br/>
@@ -173,7 +178,7 @@ function kndly_charity_links_form () {
     <input type="radio" name="kndly_charity_links_id" value="-kndly-kiva" ';
   if($charity_id == "-kndly-kiva") $form .= 'checked';
   $form .= '/> <a href="http://kiva.org/">Kiva</a><br/>
-
+    </div><div style="margin-left:20px;width:250px;line-height:2.25;font-size:1.2em;float:left;clear:right;">
     <input type="radio" name="kndly_charity_links_id" value="-kndly-lds" ';
   if($charity_id == "-kndly-lds") $form .= 'checked';
   $form .= '/> <a href="http://ldsphilanthropies.org/">LDS Philanthropies</a><br/>
@@ -181,10 +186,6 @@ function kndly_charity_links_form () {
     <input type="radio" name="kndly_charity_links_id" value="-kndly-mercycorps" ';
   if($charity_id == "-kndly-mercycorps") $form .= 'checked';
   $form .= '/> <a href="http://mercycorps.org/">  Mercy Corps</a><br/>
-  
-    <input type="radio" name="kndly_charity_links_id" value="-kndly-red" ';
-  if($charity_id == "-kndly-red") $form .= 'checked';
-  $form .= '/> <a href="http://joinred.com/">(RED)</a><br/>
   
     <input type="radio" name="kndly_charity_links_id" value="-kndly-redcross" ';
   if($charity_id == "-kndly-redcross") $form .= 'checked';
@@ -202,22 +203,22 @@ function kndly_charity_links_form () {
   if($charity_id == "-kndly-unitedway") $form .= 'checked';
   $form .= '/> <a href="http://liveunited.org/">United Way</a><br/>
 
-
-  <br/>
     <input type="radio" name="kndly_charity_links_id" value="-kndly" ';
   if($charity_id == "-kndly") $form .= 'checked';
-  $form .= '/> Divide evenly among all the charities<br/>
+  $form .= '/> Divide evenly among them all<br/>
+  </div>
+  <div style="margin-left:20px;width:500px;line-height:2.25;font-size:1.2em;float:left;clear:left;">
     <br />
 	Blog Name:<input type="text" name="kndly_blog_id" value="'.get_option('kndly_blog_id').'" />
 	<br/><small>This is how we track our most successful linkers. This is not required if you wouldn\'t like to compete against other bloggers.</small>
 	<br/>
 	Team Name:<input type="text" Name="kndly_team_id" value="'.get_option('kndly_team_id').'" />
 	<br/><small>Join forces with other bloggers to build a team and compete against other teams to become the most Knd.ly bloggers. If you don\'t join a team you will be counted toward the team "Knd.ly"</small>
-	</div>
+	
 	<br/>
     <input type="submit" name="submit" value="Submit" />
     </form>
-    <p>At Knd.ly we are dedicated to making the world better for everyone. Because there\'s no "I" in kindness.</p><p>We promise that 75% of all revenue generated through the use of this plugin will be donated to the charity of your choice. We keep 25% to cover our overhead and keep the lights on.</p><p><small>Knd.ly is a service of Appible LLC, a for-profit company. To learn more about how Knd.ly works and why we do it visit us at <a href="http://knd.ly/about">http://knd.ly/about</a> to learn more.</small></p>';
+    <p>At Knd.ly (pronounced "kindly") we are dedicated to making the world better for everyone. Because there\'s no "I" in kindness.</p><p>We promise that 75% of all revenue generated through the use of this plugin will be donated to the charity of your choice. We keep 25% to cover our overhead and keep the lights on.</p><p><small>Knd.ly is a service of Appible LLC, a for-profit company. To learn more about how Knd.ly works and why we do it visit us at <a href="http://knd.ly/a/how-it-works/">http://knd.ly/a/how-it-works/</a> to learn more.</small></p></div>';
   return $form;
 }
 

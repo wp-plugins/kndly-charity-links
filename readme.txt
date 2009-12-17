@@ -1,7 +1,7 @@
 === Knd.ly Charity Links  ===
 Contributors: Appible
 Donate link: http://knd.ly/donate/
-Tags: charity, amazon, itunes, associate, filter, referral 
+Tags: charity, amazon, itunes, associate, filter, referral, affiliate, kindly, kndly 
 Requires at least: 2.2
 Tested up to: 2.8
 
@@ -9,9 +9,9 @@ Knd.ly - Because there's no "I" in kindness.
 
 == Description ==
 
-Knd.ly is a WordPress plugin that gives you an opportunity to raise money for charities through the free advertising you are already giving online retailers. When you link to another store on your blog or website, you are sending that store valuable traffic that leads to sales.  Many online stores offer a commission based on sales made from the traffic that you send them.  These stores require individual agreements and specially crafted links in order to track commissions.  Knd.ly has partnered with over 250 online stores to streamline the approval process and automatically format the links on your site to qualify for a commission on sales.  It is from this commission that the donation is made to the charity of your choice (among the dozen or so charities we support).
+Knd.ly (pronounced "kindly") is a WordPress plugin that gives you an opportunity to raise money for charities through the free advertising you are already giving online retailers. When you link to another store on your blog or website, you are sending that store valuable traffic that leads to sales.  Many online stores offer a commission based on sales made from the traffic that you send them.  These stores require individual agreements and specially crafted links in order to track commissions.  Knd.ly has partnered with over 250 online stores to streamline the approval process and automatically format the links on your site to qualify for a commission on sales.  It is from this commission that the donation is made to the charity of your choice (among the dozen or so charities we support).
 
-Lets suppose you are blogging about a new book you have read.  It would be natural to include an Amazon.com link to the book for your interested readers to be able to purchase the book and read for themselves.  As it is, this link is only sending your readers to Amazon’s store.  With Knd.ly installed, that same Amazon link will be converted to tell Amazon that their customer was referred to their store to buy that book, and Amazon will issue a referral commission.  It is from this commission that the donation is made to the charity of your choice (among the dozen or so charities we support).  Knd.ly works with over 250 such stores online.
+Lets suppose you are blogging about a new book you have read.  It would be natural to include an Amazon.com link to the book for your interested readers to be able to purchase the book and read for themselves.  As it is, this link is only sending your readers to the Amazon store.  With Knd.ly installed, that same Amazon link will be converted to tell Amazon that their customer was referred to their store to buy that book, and Amazon will issue a referral commission.  It is from this commission that the donation is made to the charity of your choice (among the dozen or so charities we support).  Knd.ly works with over 100 such stores online.
 
 To learn more about the plugin visit [our FAQ page](http://test.knd.ly/faq/). To learn more about the charities we support or the stores we can generate links for please visit [our Partners page](http://test.knd.ly/partners/).
 
